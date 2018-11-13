@@ -28,14 +28,30 @@
 	<ul>
 		<?php
 			foreach($guitars as $guitar) {
-				echo "<li>$guitar</li>";
+				echo "<li>foreach: $guitar</li>";
 			}
 		?>
 	</ul>
 	<ul>
 		<?php
 			foreach($kvpGuitars as $brand => $guitar) {
-				echo "<li>$brand: $guitar</li>";
+				echo "<li>foreach: $brand: $guitar</li>";
+			}
+		?>
+	</ul>
+	<ul>
+		<?php
+			for ($i = 0; $i < count($guitars); $i++) {
+				echo "<li>for: $guitars[$i]</li>";
+			}
+		?>
+	</ul>
+	<ul>
+		<?php
+			$i = 0;
+			while ($i < count($guitars)) {
+				echo "<li>while: $guitars[$i]</li>";
+				$i++;
 			}
 		?>
 	</ul>
